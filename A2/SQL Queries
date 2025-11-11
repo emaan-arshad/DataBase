@@ -1,0 +1,50 @@
+Q2.
+1.
+SQL Query
+Select itemName
+From MenuItem
+Where isAvailable = 0 And price > 500;
+
+2.
+SQL Query
+Select itemName
+From MenuItem
+Where (category = ‘Beverage’ And price > 300) Or category = ‘Dessert’;
+3. 
+SQL Query
+Select itemName, price
+From MenuItem
+Where category = ‘Snack’ And isAvailable = 1;
+4. 
+SQL Query
+Select itemName, price/100
+From MenuItem
+Where category = ‘Snack’ And isAvailable = 1;
+5.
+SQL Query
+Select DISTINCT s.supplierID
+From Supplier s
+Join MenuItem m on s.itemID = m.itemID
+Where m.itemID = ‘Cappuccino’;
+6.
+SQL Query
+Select e.name, c.cafeName
+From Employee e
+Join Cafe c on e.cafeID = c.cafeID And e.address = c.city;
+7.
+SQL Query
+Select empID
+From Employee
+Where salary <> 50000;
+8.
+SQL Query
+Select supplierID from supplier where city = ‘Karachi’
+INTERSECT
+Select supplierID from supplier where city = ‘Lahore’;
+9. 
+SQL Query
+Select itemName from MenuItem
+EXCEPT
+SELECT DISTINCT m.itemName
+FROM MenuItem m
+JOIN supplies s on m.itemID = s.itemID
