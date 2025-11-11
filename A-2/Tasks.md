@@ -9,7 +9,7 @@
 
 #### **A. Identify all primary Entities and their corresponding Attributes from the scenario.**
 (Underline the Primary Key for each entity)
-
+--italicizeddd pk
 **Film**  
 a. *FilmID*  
 b. Title  
